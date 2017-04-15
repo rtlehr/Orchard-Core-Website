@@ -1,0 +1,94 @@
+#mobileMenu {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    max-width: 450px;
+    height: 50px;
+    width: 50px;
+    z-index: 125;
+    background-image: url("../images/icon-top.png");
+    background-size: 100% 100%;
+    background-color: orange;
+}
+
+#mainMenu {
+    position: fixed;
+    top: 55px;
+    left: 0px;
+    width: 100%;
+    font-family: @mainMenuFontFamily;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: 115;
+    background-color: @colorOne;
+    display: none;
+}
+
+.mainMenuDefault {}
+
+.mainMenuInside {}
+
+#mainMenu ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#mainMenu ul li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: thin solid;
+}
+
+#mainMenu ul li:first-child {
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: thin solid;
+}
+
+#mainMenu ul li a {
+    padding-left: 25px;
+    padding-bottom: 15px;
+    text-decoration: none;
+}
+
+#mainMenu ul li a:hover {}
+
+
+/* visited link */
+
+#mainMenu ul li a:visited {
+    color: @colorAlt;
+}
+
+
+/* selected link */
+
+#mainMenu ul li a:active {}
+
+#mainMenu ul li ul {
+    padding: 0;
+    position: relative;
+    top: 0px;
+    left: 0;
+}
+
+#mainMenu ul li ul li:first-child {
+    display: block;
+    border-bottom: none;
+}
+
+#mainMenu ul li ul li {
+    background: @colorOne;
+    display: block;
+    font-family: @mainMenuFontFamily;
+    font-size: 16px;
+    font-weight: bold;
+    height: 22px;
+    text-align: left;
+    padding-left: 20px;
+    border-bottom: none;
+}
+
+#mainMenu ul li ul li:hover {
+    background: @colorAlt;
+}

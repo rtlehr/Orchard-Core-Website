@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<glossary>
+    <item>
+		//The word in the text to look for
+        <word>Lorem ipsum dolor sit amet</word>
+		//The content to replace the word with
+			<replaceWith><![CDATA[<a href="# target="_blank"><strong>Lorem ipsum dolor sit amet</strong></a>]]></replaceWith>
+    </item>
+	<item>
+		//The word in the text to look for
+        <word>Vivamus aliquet orci risus</word>
+		//The content to replace the word with
+			<replaceWith><![CDATA[<span title='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante.'>TOOL TIP TEXT</span>]]></replaceWith>
+    </item>
+	<item>
+		//The word in the text to look for
+        <word>info@experiencenudism.com</word>
+		//The content to replace the word with
+			<replaceWith><![CDATA[<a href="mailto:info@experiencenudism.com"><strong>info@experiencenudism.com</strong></a>]]></replaceWith>
+    </item>
+</glossary>

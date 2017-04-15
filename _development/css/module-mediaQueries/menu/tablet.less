@@ -1,0 +1,99 @@
+#mobileMenu {
+    display: none;
+}
+
+#mainMenu {
+    position: absolute;
+    top: 13px;
+    width: 98%;
+    display: block !important;
+    text-align: right;
+    font-family: @mainMenuFontFamily;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 115;
+    background-color: transparent;
+}
+
+.mainMenuDefault {
+    top: 13px;
+    left: 5%;
+    width: 90%;
+}
+
+.mainMenuInside {
+    top: 13px;
+    left: 5%;
+    width: 90%;
+}
+
+#mainMenu ul {
+    z-index: 120;
+}
+
+#mainMenu ul li {
+    display: inline-block;
+    margin-right: -4px;
+    position: relative;
+    cursor: pointer;
+    padding: 5px 5px;
+    border-bottom: none;
+}
+
+#mainMenu ul li:first-child {
+    display: none;
+}
+
+#mainMenu ul li a {
+    padding-right: 15px;
+    text-decoration: none;
+    color: @colorAlt;
+    text-shadow: 2px 2px 8px #000;
+}
+
+#mainMenu ul li a:hover {
+    color: @colorAlt;
+}
+
+
+/* visited link */
+
+#mainMenu ul li a:visited {
+    color: @colorAlt;
+}
+
+
+/* selected
+link */
+
+#mainMenu ul li a:active {}
+
+#mainMenu ul li ul {
+    padding: 0;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 180px;
+    box-shadow: none;
+}
+
+#mainMenu ul li ul li:first-child {
+    display: block;
+}
+
+#mainMenu ul li ul li {
+    background: @colorOneSub;
+    display: block;
+    color: #fff;
+    font-family: @mainMenuFontFamily;
+    font-size: 16px;
+    font-weight: bold;
+    height: 22px;
+    text-align: left;
+}
+
+#mainMenu ul li ul li:hover {
+    background: @colorTwo;
+}
+
+#mainMenu ul li:hover ul {}

@@ -1,0 +1,448 @@
+/*************
+*
+*  Loading bar
+*
+*************/
+
+#loadingBar {
+    width: 500px;
+    height: 600px;
+    z-index: 550;
+    overflow: hidden;
+}
+
+#loadingBottom { 
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#loadingTop {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#loadingTopImageHolder {}
+
+#loadingText {
+    position: absolute;
+    top: 585px;
+    left: 0px;
+    width: 500px;
+    height: 30px;
+    overflow: hidden;
+    text-align: center;
+    font-family: "proxima-nova", sans-serif;
+}
+
+/*************
+*
+*  Header
+*
+*************/
+
+#headHeight {
+    position: fixed;
+    height: 0vh;
+    z-index: 25;
+}
+
+#header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 100;
+
+    background-color: @colorOne;
+}
+
+.headerDefault {
+    height: 70px;
+}
+
+.headerInside {
+    height: 70px;
+}
+
+#headerImages {}
+
+#rotateImageOne,
+#rotateImageTwo,
+#rotateImageThree,
+#rotateImageFour {
+    display: none;
+}
+
+/*************
+*
+*  Logo
+*
+*************/
+
+
+#logo {}
+
+.logoDefault {
+    display:none;
+}
+
+/*************
+*
+*  Page Design
+*
+*************/
+
+#design {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: @subFontFamily;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    color:@colorTwo;
+}
+
+h2 {
+    font-family: @subFontFamily;
+    font-size: 1.25em;
+    font-weight: bold;
+    color:@colorTwo;
+}
+
+h3 {
+    font-family: @subFontFamily;
+    font-size: 1.1em;
+    font-weight: bold;
+    color:@colorTwo;
+}
+
+p{
+    font-family: @subFontFamily;
+    font-size: .75em;
+    color:@colorOne;
+}
+
+/*************
+*
+*  Content layout
+*
+*************/
+
+#text_nav,
+#events_nav {
+    background-color: white;
+    width: 100%;
+}
+
+#animation_nav {
+    background-color: white;
+    width: 100%;
+    height: 1400px;
+}
+
+/*************
+*
+*  Footer
+*
+*************/
+
+#footer_nav {
+    background-color: @colorOne;
+    border-top: 10px solid white;
+    min-height: 50vh;
+    background-position: left bottom;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#createdBy {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 250;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/rtlLogo.jpg");
+    background-size: 30px 30px;
+    -webkit-box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.6) !important;
+    -moz-box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.6) !important;
+    box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.6) !important;
+    cursor: pointer;
+}
+
+#socialMedia {
+    position: relative;
+}
+
+#socialMedia #email {
+    position: relative;
+    width: 104px;
+    height: 104px;
+    background-image: url("../images/icon-email.png");
+}
+
+#socialMedia #twitter {
+    position: relative;
+    width: 104px;
+    height: 104px;
+    background-image: url("../images/icon-twitter.png");
+}
+
+#backToTop {
+  position: fixed;
+  right: 50px;
+  bottom: -50px;
+  height: 50px;
+  width: 50px;
+  z-index: 50;
+  background-image: url("../images/icon-top.png");
+}
+
+/*************
+*
+*  Background images
+*
+*************/
+
+#topImage {
+    background-image: url("../images/backgroundOne.jpg");
+    height: 100vh;
+}
+
+#image2 {
+    background-image: url("../images/backgroundTwo.jpg");
+}
+
+#image3 {
+    background-image: url("../images/backgroundThree.jpg");
+}
+
+/*************
+*
+*  Sliding images
+*
+*************/
+
+body .ui-tooltip {
+    border-width: 0px;
+}
+
+.ui-tooltip {
+    background: white;
+    color: black;
+    opacity: 1;
+    font-family: @imageCaption !important;
+    z-index: 0 !important;
+    padding: 5px;
+    border: 2px solid black !important;
+}
+
+.pictureFrame {
+    border-style: 8px solid white !important;
+    -webkit-box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.4) !important;
+    -moz-box-shadow: 5px 5px 8px -3px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 5px 5px 16px -3px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 5px 5px 5px 5px !important;
+    -moz-border-radius: 5px 5px 5px 5px !important;
+    -webkit-border-radius: 5px 5px 5px 5px !important;
+    border: 16px solid #f7f7f7;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#leftOne {
+    position: absolute;
+    top: 350px;
+    left: -400px;
+    height: 200px;
+    width: 200px;
+    background-color: #999;
+    -ms-transform: rotate(-15deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-15deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-15deg);
+
+    background-image: url("../images/activityLeftOne.jpg");
+}
+
+#rightOne {
+    position: absolute;
+    top: 350px;
+    left: calc(100% + 1px);
+    height: 200px;
+    width: 200px;
+    background-color: #999;
+    -ms-transform: rotate(10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(10deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+
+    background-image: url("../images/activityRightOne.jpg");
+}
+
+#leftTwo {
+    position: absolute;
+    top: 650px;
+    left: -400px;
+    height: 200px;
+    width: 200px;
+    background-color: #999;
+    -ms-transform: rotate(25deg);
+    /* IE 9 */
+    -webkit-transform: rotate(25deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(25deg);
+
+    background-image: url("../images/activityLeftTwo.jpg");
+}
+
+#rightTwo {
+    position: absolute;
+    top: 650px;
+    left: calc(100% + 1px);
+    height: 200px;
+    width: 200px;
+    background-color: #999;
+    -ms-transform: rotate(-10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-10deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+
+    background-image: url("../images/activityRightTwo.jpg");
+}
+
+#leftThree {
+    position: absolute;
+    top: 950px;
+    left: -400px;
+    height: 200px;
+    width: 200px;
+    background-color: #999;
+    -ms-transform: rotate(-25deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-25deg);
+    /* Chrome,
+Safari, Opera */
+    transform: rotate(-25deg);
+
+    background-image: url("../images/activityLeftThree.jpg");
+}
+
+#rightThree {
+    position: absolute;
+    top: 950px;
+    left: calc(100% + 1px);
+    height: 200px;
+    width: 200px;
+    background-color: #999;
+    -ms-transform: rotate(20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(20deg);
+    /* Chrome,
+Safari, Opera */
+    transform: rotate(20deg);
+
+    background-image: url("../images/activityRightThree.jpg");
+}
+
+/*************
+*
+*  Text layout
+*
+*************/
+
+.oneColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    12;
+    0;
+    @float: none;
+    0;
+    true);
+}
+
+.twoColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    6;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.threeColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    4;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fourColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    3;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fiveColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    (12/5);
+    10;
+    @float: left;
+    0;
+    true);
+}

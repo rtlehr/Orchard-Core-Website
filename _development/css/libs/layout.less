@@ -1,0 +1,416 @@
+
+/*
+Generate the "width" in pixels and NO gutter
+
+Used to layout equal columns in a row
+
+.equalColumns(@totalWidth; @columns; @gutter; @float; @counter)
+
+@totalWidth: total width of the row
+@columns: the width of the individual columns, based on the columns set up in @total_columns
+          sample: @columns; 2 (equals 2/@total_columns width)
+@gutter: the margin-right for all the columns (default: 0)
+         the last column will have a margin-right of 0px;
+@float: (boolean) true: adds a float:left, false: no float
+@counter: used for to loop thru the columns (DO NOT CHANGE THE DEFAULT SETTING OF 1)
+
+THE CSS BELOW
+
+This is based on a 12 column area
+@total_columns: 12;  
+
+#content
+{
+
+	background-color: @colorAlt;
+	overflow: hidden;
+	width:@desktopBreak*1px;
+	.equalColumns(1000; 2; 10; @float:left);
+
+}
+
+PRODUCES
+
+#content {
+  background-color: #000000;
+  overflow: hidden;
+  width: 1000px;
+}
+
+#content .column {
+  width: 158.33333333333334px;
+  margin-right: 10px;
+  float: left;
+}
+
+#content .column:last-child {
+  width: 158.33333333333334px;
+  margin-right: 0px;
+  float: left;
+}
+
+*/
+.equalColumns(@baseWidth; @numOfColums; @gutter:0; @float:none; @lineBreak:0; @usePrecent:true)
+{
+	//Find the width of an individual column
+	@singleColumn: (@baseWidth/@total_columns);
+	
+	@totalNumOf: @total_columns/@numOfColums;
+	
+	//Subtract the width of a gutter if there is one	  	
+	@colWidth: (@baseWidth - ((@totalNumOf - 1)*@gutter))/@totalNumOf;
+	
+	@thisUsePrecent: @usePrecent;
+	
+	@thisLineBreak: @lineBreak;
+	
+	@thisGutter: @gutter;
+  
+	& when (@thisLineBreak > 0)
+	{   
+		
+		.column:nth-child(@{thisLineBreak}n + 1)
+        {
+			
+            clear:@float;
+			
+        }
+		
+		@clearMargin: @thisLineBreak - 1;
+		
+		.column:nth-child(@{thisLineBreak}n)
+        {
+			
+			margin-right: 0*1px;
+			
+        }
+		
+		& when (@thisUsePrecent=false){
+			
+			.column 
+			{
+				
+				margin-bottom: @gutter*1px;
+				
+			}
+			
+		}
+		
+		& when (@thisUsePrecent=true){
+			
+			.column 
+			{
+				
+				margin-bottom: percentage(@gutter/@baseWidth);
+				
+			}
+			
+		}
+		
+	}
+	
+  & when (@thisGutter = 0)
+  {
+	  
+	& when (@thisUsePrecent=false)
+	{
+		//Create the CSS width
+		.column 
+		{
+			
+			width: @colWidth*1px;
+			float: @float;
+			
+		}
+		
+	}
+	
+	& when (@thisUsePrecent=true)
+	{
+		
+		//Create the CSS width
+		.column 
+		{
+			
+			width: percentage(@colWidth/@baseWidth);
+			float: @float;
+			
+		}
+		
+	}
+	  
+  }
+  
+  & when (@thisGutter > 0)
+  {
+	  
+    & when (@thisUsePrecent=false)
+	{
+		
+		.column 
+		{
+			//Create the CSS width
+			width: @colWidth*1px;
+			//Add a margin for the gutter
+			margin-right: @gutter*1px;
+			//Add float
+			float: @float;
+
+		}
+
+		//Write the CSS for the last column
+		& .column:last-child 
+		{
+
+			width: @colWidth*1px;
+			margin-right: 0px;
+			float: @float;
+
+		}
+		
+	}
+	
+	& when (@thisUsePrecent=true)
+	{
+		
+		.column 
+		{
+			
+			//Create the CSS width
+			width:percentage(@colWidth/@baseWidth)*1px;
+			//Add a margin for the gutter
+			margin-right: percentage(@gutter/@baseWidth)*1px;
+			float: @float;
+			
+		}
+
+
+		//Write the CSS for the last column
+		& .column:last-child 
+		{
+			
+			width: percentage(@colWidth/@baseWidth)*1px;
+			margin-right:  percentage(0);
+			float: @float;
+			
+		}
+		
+	}
+	  
+  }
+	
+}
+
+/*
+unequalColumns
+
+Used to layout unequal Cclumns in a row
+
+.unequalColumns(@totalWidth; @columns; @gutter; @float; @counter)
+
+@totalWidth: total width of the row
+@columns: the width of the individual columns, based on the columns set up in @total_columns
+          sample: @columns; 2,6,2 (sets up three columns, the total number should equal the @total_columns number)
+					2 = 2/@total_columns
+					6 = 6/@total_columns
+					2 = 2/@total_columns
+@gutter: the margins for all the columns (default: 5,5,5,5)
+@float: (boolean) true: adds a float:left, false: no float
+@counter: used for to loop thru the columns (DO NOT CHANGE THE DEFAULT SETTING OF 1)
+
+THIS CSS BELOW
+
+This is based on a 12 column area
+@total_columns: 12;  
+
+.content 
+{
+
+	overflow: hidden;
+	width:1000px;
+
+	.unequalColumns(@desktopBreak; 3,6,3; 0,10,0,10; left; true);
+
+}
+
+PRODUCES
+
+.content {
+  overflow: hidden;
+  width: 1000px;
+}
+.content .column:nth-child(1) {
+  float: left;
+  width: 23.5%;
+  margin: 0% 1% 0% 1%;
+}
+.content .column:nth-child(2) {
+  float: left;
+  width: 48.5%;
+  margin: 0% 0.5% 0% 0.5%;
+}
+.content .column:nth-child(3) {
+  float: left;
+  width: 23.5%;
+  margin: 0% 1% 0% 0.5%;
+}
+
+
+*/
+
+.unequalColumns(@totalWidth; @columns; @gutter: 5,5,5,5; @float:left; @usePrecent:true; @counter: 1) when (@counter = 1)
+{
+	//calculate a single column size
+  @singleColumn: (@totalWidth/@total_columns);
+  
+	//get the float value
+  @thisFloat:@float;
+  
+	//Get the counter value
+  @thisCounter:@counter;
+  
+	//get the total number of columns
+  @lengthCols: length(@columns);
+  
+	//extract the top margin from the @gutter
+  @top: extract(@gutter, 1);
+  
+	//extract the right margin from the @gutter
+  @right: extract(@gutter, 2);
+  
+	//extract the bottom margin from the @gutter
+  @bottom: extract(@gutter, 3);
+  
+	//extract the left margin from the @gutter
+  @left: extract(@gutter, 4);
+  
+	//get the usePrecent value
+  @thisUsePrecent: @usePrecent;
+	
+	& when (@thisUsePrecent=false){
+		
+		//if there is a float
+		@t: ~":nth-child(@{counter})";
+    	> column@{t}{
+			//Add the float
+			float:@float;
+			//calculate the width of this column
+			width: ((@singleColumn*extract(@columns, @counter))-((@right/2)+@left))*1px;
+			//add the margins
+			margin: @top*1px (@right/2)*1px @bottom*1px @left*1px;
+		}
+		
+	}
+	
+	& when (@thisUsePrecent=true){
+	//if there is a float
+    @t: ~":nth-child(@{counter})";
+    	.column@{t}{
+		//Add the float
+     	float:@float;
+		//calculate the width of this column
+        width: percentage(((@singleColumn*extract(@columns, @counter))-((@right/2)+@left))/@totalWidth);
+		//add the margins
+      	margin: percentage(@top/@totalWidth) percentage(@right/@totalWidth) percentage(@bottom/@totalWidth) percentage(@left/@totalWidth);
+    }
+  }
+  
+	//loop to the next column
+  .unequalColumns(@totalWidth; @columns; @gutter; @float; @usePrecent; (@counter + 1));
+}
+
+.unequalColumns(@totalWidth; @columns; @gutter: 5,5,5,5; @float:true; @usePrecent:false; @counter: 1) when (@counter > 1) and (@counter < length(@columns))
+{
+  @singleColumn: (@totalWidth/@total_columns);
+  
+  @thisFloat:@float;
+  
+  @thisCounter:@counter;
+  
+  @lengthCols: length(@columns);
+  
+  @top: extract(@gutter, 1);
+  
+  @right: extract(@gutter, 2);
+  
+  @bottom: extract(@gutter, 3);
+  
+  @left: extract(@gutter, 4);
+
+	//get the usePrecent value
+  @thisUsePrecent: @usePrecent;
+	
+	& when (@thisUsePrecent=false){
+		
+		@t: ~":nth-child(@{counter})";
+    	.column@{t}{
+			float: @float;
+			width: ((@singleColumn*extract(@columns, @counter))-((@right/2)+(@left/2)))*1px;
+			margin: @top*1px (@right/2)*1px @bottom*1px (@left/2)*1px;
+		}
+	}
+	
+	& when (@thisUsePrecent=true){
+	//if there is a float
+    @t: ~":nth-child(@{counter})";
+    	.column@{t}{
+		//Add the float
+     	float:@float;
+		//calculate the width of this column
+        width: percentage(((@singleColumn*extract(@columns, @counter))-((@right/2)+@left))/@totalWidth);
+		//add the margins
+      	margin: percentage(@top/@totalWidth) percentage((@right/2)/@totalWidth) percentage(@bottom/@totalWidth) percentage((@left/2)/@totalWidth);
+    }
+	}
+
+  
+  .unequalColumns(@totalWidth; @columns; @gutter; @float; @usePrecent; (@counter + 1));
+}
+
+.unequalColumns(@totalWidth; @columns;  @gutter: 5,5,5,5; @float:left; @usePrecent:false; @counter: 1) when (@counter = length(@columns))
+{
+  @singleColumn: (@totalWidth/@total_columns);
+  
+  @thisFloat:@float;
+  
+  @thisCounter:@counter;
+  
+  @lengthCols: length(@columns);
+  
+  @top: extract(@gutter, 1);
+  
+  @right: extract(@gutter, 2);
+  
+  @bottom: extract(@gutter, 3);
+  
+  @left: extract(@gutter, 4);
+
+	//get the usePrecent value
+  @thisUsePrecent: @usePrecent;
+	
+	& when (@thisUsePrecent=false){
+		
+		@t: ~":nth-child(@{counter})";
+    	.column@{t}{
+			float: @float;
+			width: ((@singleColumn*extract(@columns, @counter))-(@right+(@left/2)))*1px;
+			margin: @top*1px @right*1px @bottom*1px (@left/2)*1px;
+		}
+	}
+
+	& when (@thisUsePrecent=true){
+	//if there is a float
+    @t: ~":nth-child(@{counter})";
+    .column@{t}{
+		//Add the float
+     	float:@float;
+		//calculate the width of this column
+        width: percentage(((@singleColumn*extract(@columns, @counter))-((@right/2)+@left))/@totalWidth);
+		//add the margins
+      	margin: percentage(@top/@totalWidth) percentage(@right/@totalWidth) percentage(@bottom/@totalWidth) percentage((@left/2)/@totalWidth);
+    }
+  }
+  
+  .unequalColumns(@totalWidth; @columns; @gutter; @usePrecent; @float;(@counter + 1));
+}
+

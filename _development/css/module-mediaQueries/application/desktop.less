@@ -1,0 +1,232 @@
+/*************
+*
+*  Loading bar
+*
+*************/
+
+#loadingBar {}
+
+#loadingBottom {}
+
+#loadingTop {}
+
+#loadingTopImageHolder {}
+
+#loadingText {}
+
+/*************
+*
+*  Header
+*
+*************/
+
+#headHeight {}
+
+#header {
+    background-color: @colorOne;
+}
+
+.headerDefault { 
+    height: 100vh;
+    /* center it */
+    background-position: center center;
+    /* Scale it nicely
+to the element */
+    background-size: cover;
+    /* ADD THIS BACK FOR FINAL DESIGN background-image: url( "../images/headerBackgroundDefault.png" ); */         
+
+    } 
+
+.headerInside {
+    height: 70px;
+}
+
+/*************
+*
+*  Logo
+*
+*************/
+
+#logo { 
+    position:relative; 
+    display:block; 
+    z-index:110;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logoDefault {}
+
+.logoInside {}
+
+#backToTop {}
+
+/*************
+*
+*  Page Design
+*
+*************/
+
+#design {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+/*************
+*
+*  Content layout
+*
+*************/
+
+#text_nav,
+#events_nav,
+#animation_nav {}
+
+/*************
+*
+*  Modal windows
+*
+*************/
+
+#sample_modal {}
+
+#video_modal {}
+
+/*************
+*
+*  Footer
+*
+*************/
+
+#footer_nav {}
+
+#socialMedia {}
+
+#socialMedia #email {}
+
+#socialMedia #twitter {}
+
+#createdBy {}
+
+/*************
+*
+*  Background images
+*
+*************/
+
+#topImage {}
+
+#image2 {}
+
+#image3 {}
+
+/*************
+*
+*  Sliding images
+*
+*************/
+
+body .ui-tooltip {}
+
+.ui-tooltip {}
+
+.pictureFrame {}
+
+#leftOne {}
+
+#rightOne {}
+
+#leftTwo {}
+
+#rightTwo {}
+
+#leftThree {}
+
+#rightThree {}
+
+/*************
+*
+*  Text layout
+*
+*************/
+
+.oneColumns {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    12;
+    0;
+    @float: none;
+    0;
+    true);
+}
+
+.twoColumns {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    6;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.threeColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    4;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fourColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    3;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fiveColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    (12/5);
+    10;
+    @float: left;
+    0;
+    true);
+}

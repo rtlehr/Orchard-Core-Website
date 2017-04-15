@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<html class=“no-js” ng-app>
+
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Varela|Work+Sans:400,800,600|Patrick+Hand' rel='stylesheet' type='text/css'>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>ALLAX template</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="assets/css/frameworks/boilerplate.css" rel="stylesheet" type="text/css">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link href="assets/css/frameworks/jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+    <link href="assets/css/events.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/common.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/application.css" rel="stylesheet" type="text/css">
+
+    <script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Set the height of this to the height you want the #header to slide up and down CSS is located in -design-->
+    <div id="headHeight"></div>
+
+    <!-- LOADING SCREEN CSS is located in -design-->
+    <!-- To work properly, both images must be the same size -->
+    <!-- this get's the class HIDE after all images are loaded -->
+    <div id="loadingBar" class="absoluteCenter">
+        <div id="loadingBottom">
+            <img id="loadingBottomImage" src="assets/images/backgroundOne.png" width="500" height="600" />
+        </div>
+        <div id="loadingTop">
+            <div id="loadingTopImageHolder">
+                <img id="loadingTopImage" src="assets/images/backgroundTwo.png" width="500" height="600" />
+            </div>
+        </div>
+        <div id="loadingText"></div>
+    </div>
+
+    <!-- holds the main design of the page -->
+    <!-- The HIDE class is removed once the images start to preload -->
+    <div id="design" class="hide">
+
+        <!-- The header CSS is located in -design -->
+        <div id="header" class="headerDefault">
+
+            <!-- start background images -->
+            <div id="headerImages" class="rotateImages">
+
+                <div id="rotateImageOne" class="headerBackgroundImage" style="display: block;">
+                    <div class="start">
+                        <h2>THIS IS THE IMAGE TEXT 1</h2>
+
+                        <p>&nbsp;</p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien egestas
+                            convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
+                        </p>
+                    </div>
+                </div>
+                <div id="rotateImageTwo" class="headerBackgroundImage" style="display: none;">
+                    <div class="start">
+                        <h2>THIS IS THE IMAGE TEXT 2</h2>
+
+                        <p>&nbsp;</p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien egestas
+                            convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
+                        </p>
+                    </div>
+                </div>
+                <div id="rotateImageThree" class="headerBackgroundImage" style="display: none;">
+                    <div class="start">
+                        <h2>THIS IS THE IMAGE TEXT 3</h2>
+
+                        <p>&nbsp;</p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien egestas
+                            convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
+                        </p>
+                    </div>
+                </div>
+                <div id="rotateImageFour" class="headerBackgroundImage" style="display: none;">
+                    <div class="start">
+                        <h2>THIS IS THE IMAGE TEXT 4</h2>
+
+                        <p>&nbsp;</p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien egestas
+                            convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- This is the button used on the mobile version to show/hide the main menu CSS is located in -menu -->
+            <div id="mobileMenu"></div>
+
+            <!-- logo CSS is located in -design -->
+            <!-- this get's the class HIDE in the mobile version -->
+            <!-- the ALLAX-TOP adds a click event that sends the page to the top of the screen -->
+            <div id="logo" class="logoDefault allax-top"></div>
+
+            <!-- MainMenu CSS is located in -menu -->
+            <div id="mainMenu" class="mainMenuDefault">
+
+                <!-- List out the main menu CSS is located in -menu -->
+                <ul id="mainMenuList">
+                    <li>
+                        <!-- The home button is hidden in the desktop and tablet version -->
+                        <!-- on the mobile version this sends the page to the top -->
+                        <a rel="topImage" href="#" class="allax-top">Home</a>
+                    </li>
+                    <li>
+                        <!-- navigation button CSS is located in -menu -->
+                        <!-- the class ALLAX-NAVBUTTON adds a click event that sends the page to the correct section -->
+                        <!-- the vaule of the REL attribute is the ID of the DIV the page should move to -->
+                        <a rel="text_nav" href="#" class="allax-navButton">About</a>
+                    </li>
+                    <li><a rel="animation_nav" href="#" class="allax-navButton">Activities</a></li>
+                    <li><a rel="events_nav" href="#" class="allax-navButton">Events</a></li>
+                    <li><a rel="footer_nav" href="#" class="allax-navButton">Contact</a></li>
+                    <li><a href="#video_modal" rel="" onclick="openModal('modalWindow')">Modal Window</a></li>
+                </ul>
+
+                <!-- End of the mainMenu -->
+            </div>
+
+            <!-- End of the header -->
+        </div>
+
+        <!-- the class ALLAX-IMAGE applies the syles needed to create the parallax effect CSS is located in -allax -->
+        <!-- the image itself is applied with CSS -->
+        <div id="topImage" class="allax-image">&nbsp;</div>
+
+        <!-- the class ALLAX-CONTENT applies the default syles needed for page content CSS is located in -allax -->
+        <!-- additional styles are applied using the ID CSS is located in -design -->
+        <div id="text_nav" class="allax-content">
+            <!-- ADD-GLOSSARY is used to apply the glossary.js to this DIV -->
+            <div class="oneColumns add-glossary">
+
+                <div class="column">
+
+                    <h1>About Us</h1>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien egestas
+                        convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
+                        posuere. Ac mi at in ullamcorper voluptatem eget, tempus ut egestas nec vel, vehicula etiam non, sem amet. Donec urna et quam amet congue cursus. Quod varius, amet ad wisi vel eros faucibus, vehicula vulputate id dapibus phasellus
+                        diam, sit id lacinia ut tellus, rhoncus vel dolor pellentesque. Nisl ac laoreet, curabitur vehicula ut, dolor sit cras venenatis velit, amet proin sint orci adipiscing. Volutpat eget, accumsan faucibus ultrices amet in tortor,
+                        at ac.
+                    </p>
+
+                    <p>&nbsp;</p>
+
+                    <p>
+                        Cursus eros eros eu vulputate pede, posuere integer suspendisse vitae aenean etiam, duis amet, mauris nec justo amet nam, consectetuer erat suspendisse non vestibulum etiam. Feugiat vestibulum, erat vivamus, tortor cursus tellus sagittis porttitor nisl
+                        mollis, elementum tempus phasellus. Vehicula eleifend dolor mauris dolor vitae, ornare sed, dui pellentesque pede senectus, nam id velit convallis maecenas. Egestas nibh enim consectetuer, tristique sociosqu magna vestibulum. Congue
+                        volutpat ligula, volutpat quam nascetur metus, bibendum et etiam rutrum velit nulla amet. Turpis tempor purus ante velit purus, ultrices ut. Est turpis lacinia. Suspendisse massa pede facilisis pharetra sodales phasellus. Nonummy
+                        integer vestibulum hendrerit nunc tellus donec, lorem cras, quis ultricies vehicula. Ac massa lorem lorem elit ac.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="image2" class="allax-image">&nbsp;</div>
+
+        <div id="animation_nav" class="allax-content">
+
+            <div class="oneColumns add-glossary">
+
+                <div class="column">
+
+                    <h1>Activities</h1>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante. Nunc id enim vitae tellus finibus ornare. Sed id ligula id lectus gravida varius. Duis et lobortis lacus, sed viverra leo. Sed in condimentum
+                        metus, a varius neque. Vivamus aliquet orci risus, sit amet gravida tellus laoreet in. Integer ut lectus est. Donec risus sem, semper a tincidunt non, iaculis ut ligula.
+                    </p>
+
+                    <p>&nbsp;</p>
+
+                    <p>
+                        Sed vel lectus consequat, elementum risus eget, aliquam lacus. Phasellus at felis ultricies tortor lacinia blandit id nec tortor. Proin mattis leo enim, eu suscipit ipsum sodales vel. Morbi nec lorem dui. Etiam dignissim condimentum pulvinar. Sed sit
+                        amet suscipit nisl, in aliquet libero. Vestibulum eu dictum elit, a ultrices libero. Vivamus fermentum dignissim faucibus. Cras mattis facilisis bibendum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus. <strong>Roll ove the image for more information</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div id="leftOne" class="pictureFrame toolTipRight" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante."></div>
+            <div id="rightOne" class="pictureFrame toolTipLeft" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante."></div>
+            <div id="leftTwo" class="pictureFrame toolTipRight" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante."></div>
+            <div id="rightTwo" class="pictureFrame toolTipLeft" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante."></div>
+            <div id="leftThree" class="pictureFrame toolTipRight" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante."></div>
+            <div id="rightThree" class="pictureFrame toolTipLeft" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante."></div>
+
+        </div>
+
+        <div id="image3" class="allax-image config-image"></div>
+
+        <div id="events_nav" class="allax-content">
+
+            <div class="oneColumns add-glossary">
+
+                <div class="column">
+
+                    <div class="centerContent">
+
+                        <h1>Events</h1>
+
+                        <p>
+                            consectetur adipiscing elit. Nulla augue elit, porta eu sapien at, luctus suscipit ante. Nunc id enim vitae tellus finibus ornare. Sed id ligula id lectus gravida varius. Duis et lobortis lacus, sed viverra leo. Sed in condimentum metus, a varius neque.
+                            Vivamus aliquet orci risus, sit amet gravida tellus laoreet in. Integer ut lectus est. Donec risus sem, semper a tincidunt non, iaculis ut ligula.
+                        </p>
+
+                        <p>&nbsp;</p>
+
+                        <p>
+                            Sed vel lectus consequat, elementum risus eget, aliquam lacus. Phasellus at felis ultricies tortor lacinia blandit id nec tortor. Proin mattis leo enim, eu suscipit ipsum sodales vel. Morbi nec lorem dui. Etiam dignissim condimentum pulvinar. Sed sit
+                            amet suscipit nisl, in aliquet libero. Vestibulum eu dictum elit, a ultrices libero. Vivamus fermentum dignissim faucibus. Cras mattis facilisis bibendum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                            ridiculus mus.
+                        </p>
+
+                        <div id="accordion" class="add-events"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="footer_nav" class="allax-content">
+
+            <div class="twoColumns add-glossary">
+
+                <div class="column">
+                    <h2>Thank You!!</h2>
+                    <p/> Lorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui.
+                    <p/>
+                    <h2>PHONE NUMBER</h2>
+                    <p/>
+                    <div id="socialMedia">
+                        <div id="email"></div>
+                        <div id="twitter"></div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3><a href="" target="">elementum tempus phasellus. Vehicula eleifend dolor mauris </a></h3>
+                    <p/>
+                    <h3><a href="" rel="">Ultricies ut sed dui sed potenti, lorem</a></h3>
+                </div>
+
+            </div>
+
+            <!-- Button that appears at the bottom of the screen when the page is NOT at the top. CSS is in -design -->
+            <div id="backToTop" class="allax-top"></div>
+
+
+        </div>
+
+        <!-- created by -->
+        <div id="createdBy" onclick="window.open('http://www.rosslehr.com', '_blank');"></div>
+
+        <div id="sample_modal" style="display:none">
+
+
+            <h2>This is a modal window</h2>
+
+            This is another avenue to supply more information to your customers
+
+
+        </div>
+
+        <div id="modalWindow" title="Modal Window">
+
+            <h2>This could be your intro video</h2>
+
+            <p>
+                TLorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien
+                egestas convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
+                posuere. Ac mi at in ullamcorper voluptatem eget, tempus ut egestas nec vel, vehicula etiam non, sem amet. Donec urna et quam amet congue cursus. Quod varius, amet ad wisi vel eros faucibus, vehicula vulputate id dapibus phasellus diam,
+                sit id lacinia ut tellus, rhoncus vel dolor pellentesque. Nisl ac laoreet, curabitur vehicula ut, dolor sit cras venenatis velit, amet proin sint orci adipiscing. Volutpat eget, accumsan faucibus ultrices amet in tortor, at ac.
+            </p>
+
+        </div>
+
+</body>
+
+<script src="assets/js/frameworks/jquery.min.js"></script>
+<script src="assets/js/frameworks/jquery-ui.min.js"></script>
+<script src="assets/js/application.js"></script>
+<script src="assets/js/allax.js"></script>
+
+
+<script>
+    var modalWindow;
+
+    modalWindow = $("#modalWindow").dialog({
+
+        autoOpen: false,
+        modal: true,
+        minHeight: 500,
+        open: function() {
+
+            $(this).dialog("option", "width", (Math.min(700, $(window).width()) * 0.8));
+            $(this).dialog("option", "height", (Math.min(700, $(window).height()) * 0.8));
+
+        }
+
+    });
+</script>
+
+<script>
+    function openModal(modalWindow) {
+        window[modalWindow].dialog("open");
+    }
+</script>
+
+</html>

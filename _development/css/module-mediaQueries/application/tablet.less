@@ -1,0 +1,366 @@
+/*************
+*
+*  Loading bar
+*
+*************/
+
+#loadingBar {}
+
+#loadingBottom {}
+
+#loadingTop {}
+
+#loadingTopImageHolder {
+    width: 500px;
+    height: 600px;
+}
+
+#loadingText {}
+
+/*************
+*
+*  Header
+*
+*************/
+
+#headHeight {
+    position: fixed;
+    height: 90vh;
+    z-index: 25;
+}
+
+#header {} 
+
+.headerDefault {
+    height: 100vh;
+}
+
+.headerInside {
+    height: 70px;
+    background-color: @colorOne;
+}
+
+
+/*************
+*
+*  Logo
+*
+*************/
+
+#logo {
+    position: relative;
+    display: block;
+    z-index: 110;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logoDefault
+{
+	top:25px;
+	left:25px;
+	width:500px;
+	height:500px;
+	
+	background-size: contain;
+  
+	background-image: url(
+		"../images/headerLogoDefault.png"
+	);
+	
+	background-repeat: no-repeat;
+	
+}
+
+.logoInside
+{
+	top:10px;
+	left:15px;
+	width:400px;
+	height:50px;
+	
+	/* ADD THIS BACK FOR FINAL DESIGN
+	background-image: url(
+		"../images/headerLogoInside.png"
+	);
+	*/
+	
+	//REMOVE FOR FINAL DESIGN
+}
+
+#backToTop {}
+
+/*************
+*
+*  Page Design
+*
+*************/
+
+#design {}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    padding-bottom: .9em;
+    padding-top: .9em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+p{
+    font-size: 1.2em;
+}
+
+/*************
+*
+*  Content layout
+*
+*************/
+
+#text_nav,
+#events_nav,
+#animation_nav {}
+
+/*************
+*
+*  Modal windows
+*
+*************/
+
+#sample_modal {}
+
+#video_modal {}
+
+/*************
+*
+*  Footer
+*
+*************/
+
+#footer_nav {}
+
+#createdBy {}
+
+#socialMedia {}
+
+#socialMedia #email {
+    cursor: pointer;
+    float: left;
+}
+
+#socialMedia #twitter {
+    cursor: pointer;
+    float: left;
+}
+
+/*************
+*
+*  Background images
+*
+*************/
+
+#topImage {}
+
+#image2 {}
+
+#image3 {}
+
+body .ui-tooltip {}
+
+.ui-tooltip {}
+
+/*************
+*
+*  Sliding images
+*
+*************/
+
+.pictureFrame {
+    border-style: 14px solid white !important;
+    -webkit-box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.4) !important;
+    -moz-box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.4) !important;
+    box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 10px 10px 10px 10px !important;
+    -moz-border-radius: 10px 10px 10px 10px !important;
+    -webkit-border-radius: 10px 10px 10px 10px !important;
+    border: 16px solid #f7f7f7;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#leftOne {
+    position: absolute;
+    top: 350px;
+    left: -400px;
+    height: 300px;
+    width: 300px;
+    background-color: #999;
+    -ms-transform: rotate(-15deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-15deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-15deg);
+}
+
+#rightOne {
+    position: absolute;
+    top: 350px;
+    left: calc(100% + 1px);
+    height: 300px;
+    width: 300px;
+    background-color: #999;
+    -ms-transform: rotate(10deg);
+    /* IE 9 */
+    -webkit-transform: rotate(10deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(10deg);
+}
+
+#leftTwo {
+    position: absolute;
+    top: 650px;
+    left: -400px;
+    height: 300px;
+    width: 300px;
+    background-color: #999;
+    -ms-transform: rotate(25deg);
+    /* IE 9 */
+    -webkit-transform: rotate(25deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(25deg);
+}
+
+#rightTwo {
+    position: absolute;
+    top: 650px;
+    left: calc(100% + 1px);
+    height: 300px;
+    width: 300px;
+    background-color: #999;
+    -ms-transform: rotate(-10deg);
+    /*
+IE 9 */
+    -webkit-transform: rotate(-10deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-10deg);
+}
+
+#leftThree {
+    position: absolute;
+    top: 950px;
+    left: -400px;
+    height: 300px;
+    width: 300px;
+    background-color: #999;
+    -ms-transform: rotate(-25deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-25deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(-25deg);
+}
+
+#rightThree {
+    position: absolute;
+    top: 950px;
+    left: calc(100% + 1px);
+    height: 300px;
+    width: 300px;
+    background-color: #999;
+    -ms-transform: rotate(20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(20deg);
+    /* Chrome, Safari, Opera */
+    transform: rotate(20deg);
+}
+
+/*************
+*
+*  Text layout
+*
+*************/
+
+.oneColumns {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    12;
+    0;
+    @float: none;
+    0;
+    true);
+}
+
+.twoColumns {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    6;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.threeColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    4;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fourColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    3;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fiveColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    (12/5);
+    10;
+    @float: left;
+    0;
+    true);
+}

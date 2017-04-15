@@ -1,0 +1,402 @@
+#headerImages {}
+
+.headerBackgroundImage {}
+
+#rotateImageOne {}
+
+#rotateImageTwo {}
+
+#rotateImageThree {}
+
+#rotateImageFour {}
+
+.headerBackgroundImage .start
+{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 350px;
+    top: 500px;
+    left:100%;
+    background-color: white;
+    opacity: 0.75;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.headerBackgroundImage .finish
+{
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 350px;
+    top: 500px;
+    left:48%;
+    background-color: white;
+    opacity: 0.75;
+    font-weight: bold;
+    padding: 1%;
+}
+
+
+/* events base less */
+
+.event 
+{
+  
+  position:relative;
+  width: 900px;
+  margin:25px;
+  
+}
+
+.eventTitle
+{
+  font-family: @subFontFamily;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.eventDetails
+{
+  padding-top:10px;
+}
+
+.eventDate
+{
+  font-family: @subFontFamily;
+  font-weight:bold;
+	font-size: 16px;
+  color:#666;
+  width:100%;
+  padding-left:25px;
+}
+
+.eventTime
+{
+  font-family: @subFontFamily;
+	font-size: 16px;
+  font-weight:bold;
+  color:#666;
+  width:100%;
+  padding-left:25px;
+}
+
+.eventDecription
+{
+  font-size: 16px;
+  font-family: @imageCaption;
+  color:#666;
+  width:100%;
+  padding-left:25px;
+}
+/* * .allax-content applies the default syles needed for page content */
+
+.allax-content {
+    display: table;
+    position: relative;
+    width: 100vw;
+    /*min-height: 50vh;*/
+}
+
+
+/* * .allax-image applies the syles needed to create the parallax effect CSS */
+
+.allax-image {
+    position: relative;
+    width: 100vw;
+    min-height: 50vh;
+    /* fix background */
+    background-attachment: fixed;
+    /* center it */
+    background-position: center center;
+    /* Scale it nicely to the element */
+    background-size: cover;
+}
+
+
+/* * .allax-image classes get replace by .allax-image-mobile
+in the allax.js code if the site is viewed on a mobile device */
+
+.allax-image-mobile {
+    position: relative;
+    width: 100vw;
+    min-height: 50vh;
+    /* Scale it nicely to the element */
+    background-size: 100% 100%;
+}
+/*************
+*
+*  Loading bar
+*
+*************/
+
+#loadingBar {}
+
+#loadingBottom {}
+
+#loadingTop {}
+
+#loadingTopImageHolder {}
+
+#loadingText {}
+
+/*************
+*
+*  Header
+*
+*************/
+
+#headHeight {}
+
+#header {
+    background-color: @colorOne;
+}
+
+.headerDefault { 
+    height: 100vh;
+    /* center it */
+    background-position: center center;
+    /* Scale it nicely
+to the element */
+    background-size: cover;
+    /* ADD THIS BACK FOR FINAL DESIGN background-image: url( "../images/headerBackgroundDefault.png" ); */         
+
+    } 
+
+.headerInside {
+    height: 70px;
+}
+
+/*************
+*
+*  Logo
+*
+*************/
+
+#logo { 
+    position:relative; 
+    display:block; 
+    z-index:110;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logoDefault {}
+
+.logoInside {}
+
+#backToTop {}
+
+/*************
+*
+*  Page Design
+*
+*************/
+
+#design {}
+
+h1 {}
+
+h2 {}
+
+h3 {}
+
+/*************
+*
+*  Content layout
+*
+*************/
+
+#text_nav,
+#events_nav,
+#animation_nav {}
+
+/*************
+*
+*  Modal windows
+*
+*************/
+
+#sample_modal {}
+
+#video_modal {}
+
+/*************
+*
+*  Footer
+*
+*************/
+
+#footer_nav {}
+
+#socialMedia {}
+
+#socialMedia #email {}
+
+#socialMedia #twitter {}
+
+#createdBy {}
+
+/*************
+*
+*  Background images
+*
+*************/
+
+#topImage {}
+
+#image2 {}
+
+#image3 {}
+
+/*************
+*
+*  Sliding images
+*
+*************/
+
+body .ui-tooltip {}
+
+.ui-tooltip {}
+
+.pictureFrame {}
+
+#leftOne {}
+
+#rightOne {}
+
+#leftTwo {}
+
+#rightTwo {}
+
+#leftThree {}
+
+#rightThree {}
+
+/*************
+*
+*  Text layout
+*
+*************/
+
+.oneColumns {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    12;
+    0;
+    @float: none;
+    0;
+    true);
+}
+
+.twoColumns {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    6;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.threeColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    4;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fourColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    3;
+    10;
+    @float: left;
+    0;
+    true);
+}
+
+.fiveColumns {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 1em;
+    background-clip: content-box;
+    .equalColumns(@desktopBreak;
+    (12/5);
+    10;
+    @float: left;
+    0;
+    true);
+}
+#mobileMenu {
+    display: none;
+}
+
+#mainMenu {
+    font-family: @mainMenuFontFamily;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.mainMenuDefault {}
+
+.mainMenuInside {}
+
+#mainMenu ul {}
+
+#mainMenu ul li {}
+
+#mainMenu ul li:first-child {}
+
+#mainMenu ul li a {}
+
+#mainMenu ul li a:hover {}
+
+
+/* visited link */
+
+#mainMenu ul li a:visited {}
+
+
+/* selected link */
+
+#mainMenu ul li a:active {}
+
+#mainMenu ul li ul {}
+
+#mainMenu ul li ul li:first-child {}
+
+#mainMenu ul li ul li {}
+
+#mainMenu ul li ul li:hover {}
+
+#mainMenu ul li:hover ul {}

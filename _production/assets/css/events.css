@@ -1,0 +1,255 @@
+/*
+	sitePreferences.less
+	Holds all the standard style chioces for the site, colors, fonts
+*/
+/*	Media Querie break points*/
+/*
+/*	Main fonts names
+*/
+/*
+/*	Colors
+*/
+/*
+Generate the "width" in pixels and NO gutter
+
+Used to layout equal columns in a row
+
+.equalColumns(@totalWidth; @columns; @gutter; @float; @counter)
+
+@totalWidth: total width of the row
+@columns: the width of the individual columns, based on the columns set up in @total_columns
+          sample: @columns; 2 (equals 2/@total_columns width)
+@gutter: the margin-right for all the columns (default: 0)
+         the last column will have a margin-right of 0px;
+@float: (boolean) true: adds a float:left, false: no float
+@counter: used for to loop thru the columns (DO NOT CHANGE THE DEFAULT SETTING OF 1)
+
+THE CSS BELOW
+
+This is based on a 12 column area
+@total_columns: 12;  
+
+#content
+{
+
+	background-color: @colorAlt;
+	overflow: hidden;
+	width:@desktopBreak*1px;
+	.equalColumns(1000; 2; 10; @float:left);
+
+}
+
+PRODUCES
+
+#content {
+  background-color: #000000;
+  overflow: hidden;
+  width: 1000px;
+}
+
+#content .column {
+  width: 158.33333333333334px;
+  margin-right: 10px;
+  float: left;
+}
+
+#content .column:last-child {
+  width: 158.33333333333334px;
+  margin-right: 0px;
+  float: left;
+}
+
+*/
+/*
+unequalColumns
+
+Used to layout unequal Cclumns in a row
+
+.unequalColumns(@totalWidth; @columns; @gutter; @float; @counter)
+
+@totalWidth: total width of the row
+@columns: the width of the individual columns, based on the columns set up in @total_columns
+          sample: @columns; 2,6,2 (sets up three columns, the total number should equal the @total_columns number)
+					2 = 2/@total_columns
+					6 = 6/@total_columns
+					2 = 2/@total_columns
+@gutter: the margins for all the columns (default: 5,5,5,5)
+@float: (boolean) true: adds a float:left, false: no float
+@counter: used for to loop thru the columns (DO NOT CHANGE THE DEFAULT SETTING OF 1)
+
+THIS CSS BELOW
+
+This is based on a 12 column area
+@total_columns: 12;  
+
+.content 
+{
+
+	overflow: hidden;
+	width:1000px;
+
+	.unequalColumns(@desktopBreak; 3,6,3; 0,10,0,10; left; true);
+
+}
+
+PRODUCES
+
+.content {
+  overflow: hidden;
+  width: 1000px;
+}
+.content .column:nth-child(1) {
+  float: left;
+  width: 23.5%;
+  margin: 0% 1% 0% 1%;
+}
+.content .column:nth-child(2) {
+  float: left;
+  width: 48.5%;
+  margin: 0% 0.5% 0% 0.5%;
+}
+.content .column:nth-child(3) {
+  float: left;
+  width: 23.5%;
+  margin: 0% 1% 0% 0.5%;
+}
+
+
+*/
+/*
+	events.less
+	Template to use for CSS packages.
+
+	Base LESS information comes from _development/css/libs/sitePreferences.less
+
+	If you need differnt information uncomment the code below
+
+*/
+/*	Media Querie break points */
+/* Mobile layout */
+/* events mobile less */
+.event {
+  position: relative;
+  width: 900px;
+  margin: 25px;
+}
+.eventTitle {
+  font-family: 'Verdana Bold', sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+.eventDetails {
+  padding-top: 10px;
+}
+.eventDate {
+  font-family: 'Verdana Bold', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #666;
+  width: 100%;
+  padding-left: 25px;
+}
+.eventTime {
+  font-family: 'Verdana Bold', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  width: 100%;
+  padding-left: 25px;
+}
+.eventDecription {
+  font-size: 16px;
+  font-family: 'Patrick Hand', cursive;
+  color: #666;
+  width: 100%;
+  padding-left: 25px;
+}
+/* 
+	Min Size 
+	CSS to style the absolute min size of the design
+*/
+/*
+	Tablet layout 
+*/
+@media only screen and (min-width: 48em) {
+  /* events tablet less */
+  .event {
+    position: relative;
+    width: 900px;
+    margin: 25px;
+  }
+  .eventTitle {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .eventDetails {
+    padding-top: 10px;
+  }
+  .eventDate {
+    font-family: 'Verdana Bold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventTime {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventDecription {
+    font-size: 16px;
+    font-family: 'Patrick Hand', cursive;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+}
+/*
+	Desktop layout 
+*/
+@media only screen and (min-width: 76.5em) {
+  /* events base less */
+  .event {
+    position: relative;
+    width: 900px;
+    margin: 25px;
+  }
+  .eventTitle {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .eventDetails {
+    padding-top: 10px;
+  }
+  .eventDate {
+    font-family: 'Verdana Bold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventTime {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventDecription {
+    font-size: 16px;
+    font-family: 'Patrick Hand', cursive;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+}
+/* Max Size */
