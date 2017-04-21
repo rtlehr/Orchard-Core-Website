@@ -1020,19 +1020,32 @@ queue.on("complete", handleComplete, this);
 //queue.on("progress", handleProgress, this);
 
 //Load the queue with assets
-queue.loadFile("assets/images/backgroundOne.jpg");
-queue.loadFile("assets/images/backgroundTwo.jpg");
-queue.loadFile("assets/images/backgroundThree.jpg");
-queue.loadFile("assets/images/backgroundFour.jpg");
-queue.loadFile("assets/images/backgroundOne.jpg");
+queue.loadFile("assets/images/activityLeftOne.jpg");
+queue.loadFile("assets/images/activityLeftTwo.jpg");
+queue.loadFile("assets/images/activityLeftThree.jpg");
+queue.loadFile("assets/images/activityRightOne.jpg");
+queue.loadFile("assets/images/activityRightTwo.jpg");
+queue.loadFile("assets/images/activityRightThree.jpg");
+
 queue.loadFile("assets/images/icon-email.png");
 queue.loadFile("assets/images/icon-top.png");
 queue.loadFile("assets/images/icon-twitter.png");
-queue.loadFile("assets/images/backgroundOne.png");
-queue.loadFile("assets/images/backgroundTwo.png");
+
+queue.loadFile("assets/images/backgroundOne.jpg");
+queue.loadFile("assets/images/backgroundTwo.jpg");
+queue.loadFile("assets/images/backgroundThree.jpg");
+
+queue.loadFile("assets/images/headerOne.jpg");
+queue.loadFile("assets/images/headerTwo.jpg");
+queue.loadFile("assets/images/headerThree.jpg");
+queue.loadFile("assets/images/headerFour.jpg");
+
+queue.loadFile("assets/images/headerLogoDefault.png");
+
+queue.loadFile("assets/images/rtlLogo.jpg");
 
 //Total number of assets, used for the loading bar (need to check if there is a way to get this info from createjs.LoadQueue)
-var assetsTotal = 10;
+var assetsTotal = 18;
 
 //This is called after a preloaded item is finished loading
 //This menipulates the loading bar
