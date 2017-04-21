@@ -15,7 +15,7 @@
     events = function(eventsLayout) {
 
         if (eventsLayout == undefined) {
-            console.log("in the iff");
+
             this.eventsLayout = "<div class='event'>";
 
             this.eventsLayout += "\n\t<div class='eventTitle'>{{eventTitle}}</div>";

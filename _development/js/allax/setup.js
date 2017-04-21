@@ -70,7 +70,7 @@ queue.loadFile("assets/images/headerLogoDefault.png");
 queue.loadFile("assets/images/rtlLogo.jpg");
 
 //Total number of assets, used for the loading bar (need to check if there is a way to get this info from createjs.LoadQueue)
-var assetsTotal = 18;
+var assetsTotal = queue.getItems().length;
 
 //This is called after a preloaded item is finished loading
 //This menipulates the loading bar
@@ -121,8 +121,6 @@ function handleComplete() {
     $('.toolTipLeft').tooltip({
         position: { my: "right+45 center", at: "left center" }
     });
-
-    console.log("moved stuff here")
 
     //Load Glossary data
     loadGlossary("assets/data/glossary.xml");
