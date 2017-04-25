@@ -6,6 +6,9 @@ When I develop a new site/application I like to break things up into understanda
 
 This is, by no means, the way **IT SHOULD BE DONE** this is how I work, and only one of about a million ways to set up a development environment.
 
+###Sample
+http://allax.rosslehr.com
+
 ### Structure and explanation 
 
 #### _development
