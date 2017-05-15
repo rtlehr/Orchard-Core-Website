@@ -193,7 +193,7 @@ body {
 }
 /* Mobile layout */
 #headerImages {
-  display: none;
+  display: block;
 }
 .headerBackgroundImage .start {
   display: none;
@@ -330,7 +330,7 @@ body {
 #rotateImageTwo,
 #rotateImageThree,
 #rotateImageFour {
-  display: none;
+  /* display: none;*/
 }
 /*************
 *
