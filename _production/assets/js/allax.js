@@ -482,7 +482,7 @@
                 }
 
                 //If the window moves back to the top, then change the inside menu to the default 
-                if (this.scroll <= ($(window).height() - $("#headHeight").height()) && !_this.isMainMenuDefault) {
+                if (this.scroll === 0 && !_this.isMainMenuDefault) {
 
                     $('#header').animate({
 
