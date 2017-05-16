@@ -9,9 +9,6 @@
 /*
 /*	Colors
 */
-.white {
-  color: white;
-}
 /*
 Generate the "width" in pixels and NO gutter
 
@@ -193,23 +190,17 @@ body {
 }
 /* Mobile layout */
 #headerImages {
-  display: block;
-}
-.headerBackgroundImage .start {
   display: none;
 }
-.headerBackgroundImage .finish {
-  display: none;
-}
-/* events base less */
+/* events mobile less */
 .event {
   position: relative;
-  width: 95%;
-  margin: 2%;
+  width: 900px;
+  margin: 25px;
 }
 .eventTitle {
   font-family: 'Verdana Bold', sans-serif;
-  font-size: 1.25em;
+  font-size: 22px;
   font-weight: bold;
 }
 .eventDetails {
@@ -218,30 +209,25 @@ body {
 .eventDate {
   font-family: 'Verdana Bold', sans-serif;
   font-weight: bold;
-  font-size: 1em;
-  color: #666;
-  width: 33%;
-  padding-left: 25px;
-  float: left;
-}
-.eventTime {
-  font-family: 'Verdana Bold', sans-serif;
-  font-size: 1em;
-  font-weight: bold;
-  color: #666;
-  width: 33%;
-  padding-left: 25px;
-  float: left;
-}
-.eventDecription {
-  font-size: 1em;
-  font-family: 'Verdana', sans-serif;
+  font-size: 16px;
   color: #666;
   width: 100%;
   padding-left: 25px;
-  padding-top: 15px;
-  line-height: 1.5em;
-  clear: both;
+}
+.eventTime {
+  font-family: 'Verdana Bold', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  width: 100%;
+  padding-left: 25px;
+}
+.eventDecription {
+  font-size: 16px;
+  font-family: 'Patrick Hand', cursive;
+  color: #666;
+  width: 100%;
+  padding-left: 25px;
 }
 /* * .allax-content applies the default syles needed for page content */
 .allax-content {
@@ -330,7 +316,7 @@ body {
 #rotateImageTwo,
 #rotateImageThree,
 #rotateImageFour {
-  /* display: none;*/
+  display: none;
 }
 /*************
 *
@@ -374,9 +360,8 @@ h3 {
 }
 p {
   font-family: 'Verdana Bold', sans-serif;
-  font-size: 1em;
+  font-size: .75em;
   color: #474f5c;
-  line-height: 1.5em;
 }
 /*************
 *
@@ -401,7 +386,7 @@ p {
 #footer_nav {
   background-color: #474f5c;
   border-top: 10px solid white;
-  min-height: 25vh;
+  min-height: 50vh;
   background-position: left bottom;
   background-size: 25%;
   background-repeat: no-repeat;
@@ -423,21 +408,18 @@ p {
 }
 #socialMedia {
   position: relative;
-  padding-top: 10px;
 }
 #socialMedia #email {
   position: relative;
   width: 104px;
   height: 104px;
   background-image: url("../images/icon-email.png");
-  float: left;
 }
 #socialMedia #twitter {
   position: relative;
   width: 104px;
   height: 104px;
   background-image: url("../images/icon-twitter.png");
-  float: left;
 }
 #backToTop {
   position: fixed;
@@ -587,7 +569,7 @@ Safari, Opera */
 *************/
 .oneColumns {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -599,7 +581,7 @@ Safari, Opera */
 }
 .twoColumns {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -617,7 +599,7 @@ Safari, Opera */
 }
 .threeColumns {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -635,7 +617,7 @@ Safari, Opera */
 }
 .fourColumns {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -653,7 +635,7 @@ Safari, Opera */
 }
 .fiveColumns {
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -785,7 +767,7 @@ Safari, Opera */
     display: block;
     width: 50%;
     height: 350px;
-    top: 30%;
+    top: 500px;
     left: 100%;
     background-color: white;
     opacity: 0.75;
@@ -797,14 +779,50 @@ Safari, Opera */
     display: block;
     width: 50%;
     height: 350px;
-    top: 30%;
+    top: 500px;
     left: 48%;
     background-color: white;
     opacity: 0.75;
     font-weight: bold;
     padding: 1%;
   }
-  /* events base less */
+  /* events tablet less */
+  .event {
+    position: relative;
+    width: 900px;
+    margin: 25px;
+  }
+  .eventTitle {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .eventDetails {
+    padding-top: 10px;
+  }
+  .eventDate {
+    font-family: 'Verdana Bold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventTime {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventDecription {
+    font-size: 16px;
+    font-family: 'Patrick Hand', cursive;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
   /* * .allax-content applies the default syles needed for page content */
   .allax-content {
     position: relative;
@@ -1046,7 +1064,6 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .oneColumns .column {
     width: 100%;
@@ -1059,7 +1076,6 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .twoColumns .column {
     width: 49.591503267973856%;
@@ -1078,7 +1094,6 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .threeColumns .column {
     width: 32.788671023965136%;
@@ -1097,7 +1112,6 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .fourColumns .column {
     width: 24.387254901960784%;
@@ -1116,7 +1130,6 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .fiveColumns .column {
     width: 19.346405228758172%;
@@ -1216,7 +1229,7 @@ link */
     display: block;
     width: 50%;
     height: 350px;
-    top: 30%;
+    top: 500px;
     left: 100%;
     background-color: white;
     opacity: 0.75;
@@ -1228,7 +1241,7 @@ link */
     display: block;
     width: 50%;
     height: 350px;
-    top: 30%;
+    top: 500px;
     left: 48%;
     background-color: white;
     opacity: 0.75;
@@ -1236,6 +1249,42 @@ link */
     padding: 1%;
   }
   /* events base less */
+  .event {
+    position: relative;
+    width: 900px;
+    margin: 25px;
+  }
+  .eventTitle {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .eventDetails {
+    padding-top: 10px;
+  }
+  .eventDate {
+    font-family: 'Verdana Bold', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventTime {
+    font-family: 'Verdana Bold', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
+  .eventDecription {
+    font-size: 16px;
+    font-family: 'Patrick Hand', cursive;
+    color: #666;
+    width: 100%;
+    padding-left: 25px;
+  }
   /* * .allax-content applies the default syles needed for page content */
   .allax-content {
     display: table;
@@ -1309,9 +1358,6 @@ to the element */
 *  Page Design
 *
 *************/
-  p {
-    line-height: 1.5em;
-  }
   /*************
 *
 *  Content layout
@@ -1349,7 +1395,6 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .oneColumns .column {
     width: 100%;
@@ -1362,7 +1407,6 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .twoColumns .column {
     width: 49.591503267973856%;
@@ -1381,7 +1425,6 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .threeColumns .column {
     width: 32.788671023965136%;
@@ -1400,7 +1443,6 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .fourColumns .column {
     width: 24.387254901960784%;
@@ -1419,7 +1461,6 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
   }
   .fiveColumns .column {
     width: 19.346405228758172%;

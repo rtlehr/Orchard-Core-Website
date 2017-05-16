@@ -71,7 +71,7 @@ function endPageScroll() {
 
 function headerChange() {
 
-    console.log("Form application.js header changed: " + $("#headerImages"));
+    console.log("header changed");
 
     //Hide rotating images when the inside header is shown
     $("#headerImages").toggle();
