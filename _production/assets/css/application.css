@@ -1064,6 +1064,7 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .oneColumns .column {
     width: 100%;
@@ -1076,6 +1077,7 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .twoColumns .column {
     width: 49.591503267973856%;
@@ -1094,6 +1096,7 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .threeColumns .column {
     width: 32.788671023965136%;
@@ -1112,6 +1115,7 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .fourColumns .column {
     width: 24.387254901960784%;
@@ -1130,6 +1134,7 @@ IE 9 */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .fiveColumns .column {
     width: 19.346405228758172%;
@@ -1395,6 +1400,7 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .oneColumns .column {
     width: 100%;
@@ -1407,6 +1413,7 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .twoColumns .column {
     width: 49.591503267973856%;
@@ -1425,6 +1432,7 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .threeColumns .column {
     width: 32.788671023965136%;
@@ -1443,6 +1451,7 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .fourColumns .column {
     width: 24.387254901960784%;
@@ -1461,6 +1470,7 @@ to the element */
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
+    min-height: 50vh;
   }
   .fiveColumns .column {
     width: 19.346405228758172%;
