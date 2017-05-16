@@ -1,8 +1,8 @@
-#headerImages {
-    display: none;
+#headerImages { 
+    display: block;
 }
 
-.headerBackgroundImage {}
+.headerBackgroundImage {} 
 
 #rotateImageOne {}
 
@@ -12,26 +12,30 @@
 
 #rotateImageFour {}
 
-.headerBackgroundImage .start{}
+.headerBackgroundImage .start{
+    display: none;
+}
 
-.headerBackgroundImage .finish{}
+.headerBackgroundImage .finish{
+    display: none;
+}
 
 
-/* events mobile less */
+/* events base less */
 
-.event
+.event 
 {
   
   position:relative;
-  width: 900px;
-  margin:25px;
+  width: 95%;
+  margin:2%;
   
 }
 
 .eventTitle
 {
   font-family: @subFontFamily;
-	font-size: 22px;
+	font-size: 1.25em;
 	font-weight: bold;
 }
 
@@ -44,29 +48,34 @@
 {
   font-family: @subFontFamily;
   font-weight:bold;
-	font-size: 16px;
+	font-size: 1em;
   color:#666;
-  width:100%;
+  width:33%;
   padding-left:25px;
+  float: left;
 }
 
 .eventTime
 {
   font-family: @subFontFamily;
-	font-size: 16px;
+	font-size: 1em;
   font-weight:bold;
   color:#666;
-  width:100%;
+  width:33%;
   padding-left:25px;
+  float: left;
 }
 
 .eventDecription
 {
-  font-size: 16px;
-  font-family: @imageCaption;
+  font-size: 1em;
+  font-family: @mainFontFamily;
   color:#666;
   width:100%;
   padding-left:25px;
+  padding-top:15px;
+  line-height: 1.5em;
+  clear: both;
 }
 /* * .allax-content applies the default syles needed for page content */
 
@@ -103,7 +112,7 @@
 *
 *************/
 
-#loadingBar {
+#loadingBar { 
     width: 500px;
     height: 600px;
     z-index: 550;
@@ -177,7 +186,7 @@
 #rotateImageTwo,
 #rotateImageThree,
 #rotateImageFour {
-    display: none;
+   /* display: none;*/
 }
 
 /*************
@@ -197,7 +206,7 @@
 *
 *  Page Design
 *
-*************/
+*************/ 
 
 #design {
     position: absolute;
@@ -232,8 +241,9 @@ h3 {
 
 p{
     font-family: @subFontFamily;
-    font-size: .75em;
+    font-size: 1em;
     color:@colorOne;
+    line-height: 1.5em;
 }
 
 /*************
@@ -263,7 +273,7 @@ p{
 #footer_nav {
     background-color: @colorOne;
     border-top: 10px solid white;
-    min-height: 50vh;
+    min-height: 25vh;
     background-position: left bottom;
     background-size: 25%;
     background-repeat: no-repeat;
@@ -287,6 +297,7 @@ p{
 
 #socialMedia {
     position: relative;
+    padding-top: 10px;
 }
 
 #socialMedia #email {
@@ -294,6 +305,7 @@ p{
     width: 104px;
     height: 104px;
     background-image: url("../images/icon-email.png");
+    float: left;
 }
 
 #socialMedia #twitter {
@@ -301,6 +313,7 @@ p{
     width: 104px;
     height: 104px;
     background-image: url("../images/icon-twitter.png");
+    float: left;
 }
 
 #backToTop {
@@ -473,12 +486,12 @@ Safari, Opera */
 
 .oneColumns {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
+
     .equalColumns(@desktopBreak;
     12;
     0;
@@ -489,12 +502,11 @@ Safari, Opera */
 
 .twoColumns {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
     .equalColumns(@desktopBreak;
     6;
     10;
@@ -505,12 +517,11 @@ Safari, Opera */
 
 .threeColumns {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
     .equalColumns(@desktopBreak;
     4;
     10;
@@ -521,12 +532,11 @@ Safari, Opera */
 
 .fourColumns {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
     .equalColumns(@desktopBreak;
     3;
     10;
@@ -537,12 +547,11 @@ Safari, Opera */
 
 .fiveColumns {
     position: relative;
-    width: 100%;
+    width: 90%;
     margin: auto;
     overflow: hidden;
     padding-top: 1em;
     background-clip: content-box;
-    min-height: 50vh;
     .equalColumns(@desktopBreak;
     (12/5);
     10;

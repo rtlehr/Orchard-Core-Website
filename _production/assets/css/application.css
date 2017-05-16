@@ -9,6 +9,9 @@
 /*
 /*	Colors
 */
+.white {
+  color: white;
+}
 /*
 Generate the "width" in pixels and NO gutter
 
@@ -190,17 +193,23 @@ body {
 }
 /* Mobile layout */
 #headerImages {
+  display: block;
+}
+.headerBackgroundImage .start {
   display: none;
 }
-/* events mobile less */
+.headerBackgroundImage .finish {
+  display: none;
+}
+/* events base less */
 .event {
   position: relative;
-  width: 900px;
-  margin: 25px;
+  width: 95%;
+  margin: 2%;
 }
 .eventTitle {
   font-family: 'Verdana Bold', sans-serif;
-  font-size: 22px;
+  font-size: 1.25em;
   font-weight: bold;
 }
 .eventDetails {
@@ -209,25 +218,30 @@ body {
 .eventDate {
   font-family: 'Verdana Bold', sans-serif;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 1em;
   color: #666;
-  width: 100%;
+  width: 33%;
   padding-left: 25px;
+  float: left;
 }
 .eventTime {
   font-family: 'Verdana Bold', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
   color: #666;
-  width: 100%;
+  width: 33%;
   padding-left: 25px;
+  float: left;
 }
 .eventDecription {
-  font-size: 16px;
-  font-family: 'Patrick Hand', cursive;
+  font-size: 1em;
+  font-family: 'Verdana', sans-serif;
   color: #666;
   width: 100%;
   padding-left: 25px;
+  padding-top: 15px;
+  line-height: 1.5em;
+  clear: both;
 }
 /* * .allax-content applies the default syles needed for page content */
 .allax-content {
@@ -316,7 +330,7 @@ body {
 #rotateImageTwo,
 #rotateImageThree,
 #rotateImageFour {
-  display: none;
+  /* display: none;*/
 }
 /*************
 *
@@ -360,8 +374,9 @@ h3 {
 }
 p {
   font-family: 'Verdana Bold', sans-serif;
-  font-size: .75em;
+  font-size: 1em;
   color: #474f5c;
+  line-height: 1.5em;
 }
 /*************
 *
@@ -386,7 +401,7 @@ p {
 #footer_nav {
   background-color: #474f5c;
   border-top: 10px solid white;
-  min-height: 50vh;
+  min-height: 25vh;
   background-position: left bottom;
   background-size: 25%;
   background-repeat: no-repeat;
@@ -408,18 +423,21 @@ p {
 }
 #socialMedia {
   position: relative;
+  padding-top: 10px;
 }
 #socialMedia #email {
   position: relative;
   width: 104px;
   height: 104px;
   background-image: url("../images/icon-email.png");
+  float: left;
 }
 #socialMedia #twitter {
   position: relative;
   width: 104px;
   height: 104px;
   background-image: url("../images/icon-twitter.png");
+  float: left;
 }
 #backToTop {
   position: fixed;
@@ -569,7 +587,7 @@ Safari, Opera */
 *************/
 .oneColumns {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -581,7 +599,7 @@ Safari, Opera */
 }
 .twoColumns {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -599,7 +617,7 @@ Safari, Opera */
 }
 .threeColumns {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -617,7 +635,7 @@ Safari, Opera */
 }
 .fourColumns {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -635,7 +653,7 @@ Safari, Opera */
 }
 .fiveColumns {
   position: relative;
-  width: 100%;
+  width: 90%;
   margin: auto;
   overflow: hidden;
   padding-top: 1em;
@@ -767,7 +785,7 @@ Safari, Opera */
     display: block;
     width: 50%;
     height: 350px;
-    top: 500px;
+    top: 30%;
     left: 100%;
     background-color: white;
     opacity: 0.75;
@@ -779,50 +797,14 @@ Safari, Opera */
     display: block;
     width: 50%;
     height: 350px;
-    top: 500px;
+    top: 30%;
     left: 48%;
     background-color: white;
     opacity: 0.75;
     font-weight: bold;
     padding: 1%;
   }
-  /* events tablet less */
-  .event {
-    position: relative;
-    width: 900px;
-    margin: 25px;
-  }
-  .eventTitle {
-    font-family: 'Verdana Bold', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .eventDetails {
-    padding-top: 10px;
-  }
-  .eventDate {
-    font-family: 'Verdana Bold', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color: #666;
-    width: 100%;
-    padding-left: 25px;
-  }
-  .eventTime {
-    font-family: 'Verdana Bold', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #666;
-    width: 100%;
-    padding-left: 25px;
-  }
-  .eventDecription {
-    font-size: 16px;
-    font-family: 'Patrick Hand', cursive;
-    color: #666;
-    width: 100%;
-    padding-left: 25px;
-  }
+  /* events base less */
   /* * .allax-content applies the default syles needed for page content */
   .allax-content {
     position: relative;
@@ -1234,7 +1216,7 @@ link */
     display: block;
     width: 50%;
     height: 350px;
-    top: 500px;
+    top: 30%;
     left: 100%;
     background-color: white;
     opacity: 0.75;
@@ -1246,7 +1228,7 @@ link */
     display: block;
     width: 50%;
     height: 350px;
-    top: 500px;
+    top: 30%;
     left: 48%;
     background-color: white;
     opacity: 0.75;
@@ -1254,42 +1236,6 @@ link */
     padding: 1%;
   }
   /* events base less */
-  .event {
-    position: relative;
-    width: 900px;
-    margin: 25px;
-  }
-  .eventTitle {
-    font-family: 'Verdana Bold', sans-serif;
-    font-size: 22px;
-    font-weight: bold;
-  }
-  .eventDetails {
-    padding-top: 10px;
-  }
-  .eventDate {
-    font-family: 'Verdana Bold', sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    color: #666;
-    width: 100%;
-    padding-left: 25px;
-  }
-  .eventTime {
-    font-family: 'Verdana Bold', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    color: #666;
-    width: 100%;
-    padding-left: 25px;
-  }
-  .eventDecription {
-    font-size: 16px;
-    font-family: 'Patrick Hand', cursive;
-    color: #666;
-    width: 100%;
-    padding-left: 25px;
-  }
   /* * .allax-content applies the default syles needed for page content */
   .allax-content {
     display: table;
@@ -1363,6 +1309,9 @@ to the element */
 *  Page Design
 *
 *************/
+  p {
+    line-height: 1.5em;
+  }
   /*************
 *
 *  Content layout
