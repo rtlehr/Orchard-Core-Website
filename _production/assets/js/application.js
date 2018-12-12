@@ -54,7 +54,7 @@ function endPageScroll() {
     console.log("endPageScroll: ");
 
     //Reset animation... I need a flag to allow for this to be set in the DIV	
-    if (_allax.checkSectionPlayed("animation_nav")) {
+    if (_allax.checkSectionPlayed("otherservices_nav")) {
 
         //console.log("reseting club section");
         //_allax.resetSection("ourClub_nav");
@@ -96,7 +96,7 @@ function text_nav() {
  *
  **********************/
 
-function animation_nav() {
+function otherservices_nav() {
 
     var w = $(window).width();
 
@@ -124,7 +124,7 @@ function animation_nav() {
  *
  **********************/
 
-function events_nav() {
+function webdevelopment_nav() {
 
     console.log("     Events Section: ");
 

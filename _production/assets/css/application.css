@@ -1,4 +1,14 @@
 /*
+	common.less
+	Template to use for CSS packages.
+
+	Base LESS information comes from _development/css/libs/sitePreferences.less
+
+	If you need differnt information uncomment the code below
+
+*/
+/*	Media Querie break points */
+/*
 	sitePreferences.less
 	Holds all the standard style chioces for the media-querie breaks, colors, fonts
 */
@@ -119,16 +129,260 @@ PRODUCES
 
 
 */
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 /*
-	common.less
-	Template to use for CSS packages.
-
-	Base LESS information comes from _development/css/libs/sitePreferences.less
-
-	If you need differnt information uncomment the code below
-
-*/
-/*	Media Querie break points */
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links for images, or javascript/internal links
+     */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+.hide {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.show {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.handCursor {
+  cursor: pointer;
+}
+.absoluteCenter {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.clearFloat {
+  clear: both;
+}
+.tooltip {
+  font-style: italic;
+  cursor: help;
+}
 body {
   font-family: 'Verdana', sans-serif;
   font-size: 14px;
@@ -208,7 +462,7 @@ body {
   margin: 2%;
 }
 .eventTitle {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 1.25em;
   font-weight: bold;
 }
@@ -216,7 +470,7 @@ body {
   padding-top: 10px;
 }
 .eventDate {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-weight: bold;
   font-size: 1em;
   color: #666;
@@ -225,7 +479,7 @@ body {
   float: left;
 }
 .eventTime {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 1em;
   font-weight: bold;
   color: #666;
@@ -318,7 +572,7 @@ body {
   left: 0px;
   width: 100%;
   z-index: 100;
-  background-color: #474f5c;
+  background-color: #162c53;
 }
 .headerDefault {
   height: 70px;
@@ -353,29 +607,29 @@ body {
   overflow: hidden;
 }
 h1 {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 1.5em;
   font-weight: bold;
   padding-bottom: 15px;
   padding-top: 15px;
-  color: #023e34;
+  color: #f15f22;
 }
 h2 {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 1.25em;
   font-weight: bold;
-  color: #023e34;
+  color: #f15f22;
 }
 h3 {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 1.1em;
   font-weight: bold;
-  color: #023e34;
+  color: #f15f22;
 }
 p {
-  font-family: 'Verdana Bold', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 1em;
-  color: #474f5c;
+  color: #162c53;
   line-height: 1.5em;
 }
 /*************
@@ -384,11 +638,11 @@ p {
 *
 *************/
 #text_nav,
-#events_nav {
+#webdevelopment_nav {
   background-color: white;
   width: 100%;
 }
-#animation_nav {
+#otherservices_nav {
   background-color: white;
   width: 100%;
   height: 1400px;
@@ -399,7 +653,7 @@ p {
 *
 *************/
 #footer_nav {
-  background-color: #474f5c;
+  background-color: #162c53;
   border-top: 10px solid white;
   min-height: 25vh;
   background-position: left bottom;
@@ -606,12 +860,12 @@ Safari, Opera */
   background-clip: content-box;
 }
 .twoColumns .column {
-  width: 49.591503267973856%;
-  margin-right: 0.8169934640522877%;
+  width: 49.59150327%;
+  margin-right: 0.81699346%;
   float: left;
 }
 .twoColumns .column:last-child {
-  width: 49.591503267973856%;
+  width: 49.59150327%;
   margin-right: 0%;
   float: left;
 }
@@ -624,12 +878,12 @@ Safari, Opera */
   background-clip: content-box;
 }
 .threeColumns .column {
-  width: 32.788671023965136%;
-  margin-right: 0.8169934640522877%;
+  width: 32.78867102%;
+  margin-right: 0.81699346%;
   float: left;
 }
 .threeColumns .column:last-child {
-  width: 32.788671023965136%;
+  width: 32.78867102%;
   margin-right: 0%;
   float: left;
 }
@@ -642,12 +896,12 @@ Safari, Opera */
   background-clip: content-box;
 }
 .fourColumns .column {
-  width: 24.387254901960784%;
-  margin-right: 0.8169934640522877%;
+  width: 24.3872549%;
+  margin-right: 0.81699346%;
   float: left;
 }
 .fourColumns .column:last-child {
-  width: 24.387254901960784%;
+  width: 24.3872549%;
   margin-right: 0%;
   float: left;
 }
@@ -660,12 +914,12 @@ Safari, Opera */
   background-clip: content-box;
 }
 .fiveColumns .column {
-  width: 19.346405228758172%;
-  margin-right: 0.8169934640522877%;
+  width: 19.34640523%;
+  margin-right: 0.81699346%;
   float: left;
 }
 .fiveColumns .column:last-child {
-  width: 19.346405228758172%;
+  width: 19.34640523%;
   margin-right: 0%;
   float: left;
 }
@@ -686,11 +940,11 @@ Safari, Opera */
   top: 55px;
   left: 0px;
   width: 100%;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 22px;
   font-weight: bold;
   z-index: 115;
-  background-color: #474f5c;
+  background-color: #162c53;
   display: none;
 }
 #mainMenu ul {
@@ -728,9 +982,9 @@ Safari, Opera */
   border-bottom: none;
 }
 #mainMenu ul li ul li {
-  background: #474f5c;
+  background: #162c53;
   display: block;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Racing Sans One", cursive;
   font-size: 16px;
   font-weight: bold;
   height: 22px;
@@ -851,7 +1105,7 @@ Safari, Opera */
   }
   .headerInside {
     height: 70px;
-    background-color: #474f5c;
+    background-color: #162c53;
   }
   /*************
 *
@@ -1062,12 +1316,12 @@ IE 9 */
     min-height: 50vh;
   }
   .twoColumns .column {
-    width: 49.591503267973856%;
-    margin-right: 0.8169934640522877%;
+    width: 49.59150327%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .twoColumns .column:last-child {
-    width: 49.591503267973856%;
+    width: 49.59150327%;
     margin-right: 0%;
     float: left;
   }
@@ -1081,12 +1335,12 @@ IE 9 */
     min-height: 50vh;
   }
   .threeColumns .column {
-    width: 32.788671023965136%;
-    margin-right: 0.8169934640522877%;
+    width: 32.78867102%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .threeColumns .column:last-child {
-    width: 32.788671023965136%;
+    width: 32.78867102%;
     margin-right: 0%;
     float: left;
   }
@@ -1100,12 +1354,12 @@ IE 9 */
     min-height: 50vh;
   }
   .fourColumns .column {
-    width: 24.387254901960784%;
-    margin-right: 0.8169934640522877%;
+    width: 24.3872549%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .fourColumns .column:last-child {
-    width: 24.387254901960784%;
+    width: 24.3872549%;
     margin-right: 0%;
     float: left;
   }
@@ -1119,12 +1373,12 @@ IE 9 */
     min-height: 50vh;
   }
   .fiveColumns .column {
-    width: 19.346405228758172%;
-    margin-right: 0.8169934640522877%;
+    width: 19.34640523%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .fiveColumns .column:last-child {
-    width: 19.346405228758172%;
+    width: 19.34640523%;
     margin-right: 0%;
     float: left;
   }
@@ -1137,7 +1391,7 @@ IE 9 */
     width: 98%;
     display: block !important;
     text-align: right;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Racing Sans One", cursive;
     font-size: 18px;
     font-weight: bold;
     z-index: 115;
@@ -1197,14 +1451,14 @@ link */
     background: #a1adbd;
     display: block;
     color: #fff;
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Racing Sans One", cursive;
     font-size: 16px;
     font-weight: bold;
     height: 22px;
     text-align: left;
   }
   #mainMenu ul li ul li:hover {
-    background: #023e34;
+    background: #f15f22;
   }
 }
 /*
@@ -1275,7 +1529,7 @@ in the allax.js code if the site is viewed on a mobile device */
 *
 *************/
   #header {
-    background-color: #474f5c;
+    background-color: #162c53;
   }
   .headerDefault {
     height: 100vh;
@@ -1365,12 +1619,12 @@ to the element */
     min-height: 50vh;
   }
   .twoColumns .column {
-    width: 49.591503267973856%;
-    margin-right: 0.8169934640522877%;
+    width: 49.59150327%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .twoColumns .column:last-child {
-    width: 49.591503267973856%;
+    width: 49.59150327%;
     margin-right: 0%;
     float: left;
   }
@@ -1384,12 +1638,12 @@ to the element */
     min-height: 50vh;
   }
   .threeColumns .column {
-    width: 32.788671023965136%;
-    margin-right: 0.8169934640522877%;
+    width: 32.78867102%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .threeColumns .column:last-child {
-    width: 32.788671023965136%;
+    width: 32.78867102%;
     margin-right: 0%;
     float: left;
   }
@@ -1403,12 +1657,12 @@ to the element */
     min-height: 50vh;
   }
   .fourColumns .column {
-    width: 24.387254901960784%;
-    margin-right: 0.8169934640522877%;
+    width: 24.3872549%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .fourColumns .column:last-child {
-    width: 24.387254901960784%;
+    width: 24.3872549%;
     margin-right: 0%;
     float: left;
   }
@@ -1422,12 +1676,12 @@ to the element */
     min-height: 50vh;
   }
   .fiveColumns .column {
-    width: 19.346405228758172%;
-    margin-right: 0.8169934640522877%;
+    width: 19.34640523%;
+    margin-right: 0.81699346%;
     float: left;
   }
   .fiveColumns .column:last-child {
-    width: 19.346405228758172%;
+    width: 19.34640523%;
     margin-right: 0%;
     float: left;
   }
@@ -1435,7 +1689,7 @@ to the element */
     display: none;
   }
   #mainMenu {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Racing Sans One", cursive;
     font-size: 26px;
     font-weight: bold;
   }

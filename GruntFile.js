@@ -57,9 +57,9 @@ module.exports = function(grunt) {
         less: {
             application: {
                 options: {
-                    paths: '_development/css/libs',
+                    paths: '/_development/css/libs',
                     imports: {
-                        less: ['styleGuide.less', '_development/css/libs/mixins.less', '_development/css/libs/layout.less']
+                        less: ['/_development/css/libs/styleGuide.less', '/_development/css/libs/mixins.less', '/_development/css/libs/layout.less']
                     }
                 },
                 files: {
