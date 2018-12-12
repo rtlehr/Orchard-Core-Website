@@ -1693,12 +1693,9 @@ to the element */
   .choiceBox {
     margin: auto;
     width: 250px;
-    border: thin solid black;
+    border: 1px solid #f15f22;
     padding: 10px;
-    border-radius: 5px;
-    -webkit-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
     background-color: #eaeaea;
   }
   .choiceBox h4 {
