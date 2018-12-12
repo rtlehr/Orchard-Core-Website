@@ -462,7 +462,7 @@ body {
   margin: 2%;
 }
 .eventTitle {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1.25em;
   font-weight: bold;
 }
@@ -470,7 +470,7 @@ body {
   padding-top: 10px;
 }
 .eventDate {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-weight: bold;
   font-size: 1em;
   color: #666;
@@ -479,7 +479,7 @@ body {
   float: left;
 }
 .eventTime {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1em;
   font-weight: bold;
   color: #666;
@@ -607,7 +607,7 @@ body {
   overflow: hidden;
 }
 h1 {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
   padding-bottom: 15px;
@@ -615,19 +615,19 @@ h1 {
   color: #f15f22;
 }
 h2 {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1.25em;
   font-weight: bold;
   color: #f15f22;
 }
 h3 {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1.1em;
   font-weight: bold;
   color: #f15f22;
 }
 p {
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 1em;
   color: #162c53;
   line-height: 1.5em;
@@ -940,7 +940,7 @@ Safari, Opera */
   top: 55px;
   left: 0px;
   width: 100%;
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 22px;
   font-weight: bold;
   z-index: 115;
@@ -984,7 +984,7 @@ Safari, Opera */
 #mainMenu ul li ul li {
   background: #162c53;
   display: block;
-  font-family: "Racing Sans One", cursive;
+  font-family: 'Fjalla One', sans-serif;
   font-size: 16px;
   font-weight: bold;
   height: 22px;
@@ -1391,7 +1391,7 @@ IE 9 */
     width: 98%;
     display: block !important;
     text-align: right;
-    font-family: "Racing Sans One", cursive;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 18px;
     font-weight: bold;
     z-index: 115;
@@ -1451,7 +1451,7 @@ link */
     background: #a1adbd;
     display: block;
     color: #fff;
-    font-family: "Racing Sans One", cursive;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 16px;
     font-weight: bold;
     height: 22px;
@@ -1685,11 +1685,55 @@ to the element */
     margin-right: 0%;
     float: left;
   }
+  /*************
+*
+*  Choice Boxes
+*
+*************/
+  .choiceBox {
+    margin: auto;
+    width: 250px;
+    border: thin solid black;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 20px 0px rgba(0, 0, 0, 0.5);
+    background-color: #eaeaea;
+  }
+  .choiceBox h4 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 25px;
+    color: #f15f22;
+  }
+  .choiceBox .choiceBoxPrice {
+    display: block;
+    padding-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #162c53;
+  }
+  .choiceBox .choiceBoxContent {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1em;
+    color: #162c53;
+    line-height: 1.25rem;
+  }
+  .choiceBox .choiceBoxContent ul {
+    list-style: square !important;
+    padding-left: 25px;
+    line-height: 1.25rem;
+  }
   #mobileMenu {
     display: none;
   }
   #mainMenu {
-    font-family: "Racing Sans One", cursive;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 26px;
     font-weight: bold;
   }
