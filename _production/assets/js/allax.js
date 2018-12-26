@@ -1019,7 +1019,7 @@ queue.on("complete", handleComplete, this);
 
 //Load the queue with assets
 queue.loadFile("assets/images/activityLeftOne.jpg");
-queue.loadFile("assets/images/activityLeftTwo.jpg");
+/*queue.loadFile("assets/images/activityLeftTwo.jpg");
 queue.loadFile("assets/images/activityLeftThree.jpg");
 queue.loadFile("assets/images/activityRightOne.jpg");
 queue.loadFile("assets/images/activityRightTwo.jpg");
@@ -1036,7 +1036,7 @@ queue.loadFile("assets/images/backgroundThree.jpg");
 queue.loadFile("assets/images/headerOne.jpg");
 queue.loadFile("assets/images/headerTwo.jpg");
 queue.loadFile("assets/images/headerThree.jpg");
-queue.loadFile("assets/images/headerFour.jpg");
+queue.loadFile("assets/images/headerFour.jpg");*/
 
 queue.loadFile("assets/images/headerLogoDefault.png");
 

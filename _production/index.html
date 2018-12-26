@@ -144,7 +144,7 @@
                     <li><a rel="webdevelopment_nav" href="#" class="allax-navButton">Web Development</a></li>
                     <li><a rel="otherservices_nav" href="#" class="allax-navButton">Other Services</a></li>
                     <li><a rel="footer_nav" href="#" class="allax-navButton">Contact</a></li>
-                  <!--  <li><a href="#video_modal" rel="" onclick="openModal('modalWindow')">Modal Window</a></li> -->
+                    <li><a href="#video_modal" rel="" onclick="openModal('contactWindow')">Modal Window</a></li>
                 </ul>
 
                 <!-- End of the mainMenu -->
@@ -217,6 +217,12 @@
                           
                           <p>&nbsp;</p>
                         
+                          <p>
+                          
+                             For more information about Orchard-Core, please view our promotinal video.
+                            
+                          </p>
+                        
                           <div id="orchardChoices" class="threeColumns">
                         
                             <div class="column">
@@ -229,7 +235,7 @@
                                   
                                 </h4>
                                 
-                                <span class="choiceBoxPrice">$25.00/month</span>
+                                <span class="choiceBoxPrice">$10.00/month</span>
                                                                 
                                 <span class="choiceBoxContent">
                                 
@@ -238,14 +244,14 @@
                                   <p>&nbsp;</p>
                                   
                                   <ul>
-                                    <li>Post Articles</li>
-                                    <li>Post FAQs</li>
+                                    <li>Articles</li>
+                                    <li>FAQs</li>
                                     <li>Informational Pages</li>
-                                    <li>Add Gallery to Articles</li>
-                                    <li>Article Comments</li>
+                                    <li>Gallery</li>
+                                    <li>Comments</li>
                                     <li>User Profiles</li>
                                     <li>User Communication</li>
-                                    <li>1 hour of admin support/month</li>
+                                    <li>Support</li>
                                     <li>5 email addresses</li>
                                   </ul>
                                   
@@ -422,24 +428,54 @@
 
         <div id="sample_modal" style="display:none">
 
-
             <h2>This is a modal window</h2>
 
             This is another avenue to supply more information to your customers
 
-
         </div>
 
-        <div id="modalWindow" title="Modal Window">
+        <div id="contactWindow" title="Contact Window">
 
-            <h2>This could be your intro video</h2>
-
+          <form>
+       
+            <h2>Contact Us</h2>
+            
             <p>
-                TLorem ipsum dolor sit amet, lorem sint maxime massa, amet praesent integer cras dui. Pellentesque at, faucibus feugiat ipsum nunc praesent euismod, est aliquet et nulla integer vel, quaerat in in vel eget, vel ante urna. Pellentesque maecenas sapien
-                egestas convallis aenean, erat justo dui pede magna, id dapibus quam fusce turpis ultricies aliquet, viverra velit, interdum eius purus nec ac et justo. Arcu sit lorem orci nulla. Posuere nunc lacinia aliquam non eleifend, tellus quis
-                posuere. Ac mi at in ullamcorper voluptatem eget, tempus ut egestas nec vel, vehicula etiam non, sem amet. Donec urna et quam amet congue cursus. Quod varius, amet ad wisi vel eros faucibus, vehicula vulputate id dapibus phasellus diam,
-                sit id lacinia ut tellus, rhoncus vel dolor pellentesque. Nisl ac laoreet, curabitur vehicula ut, dolor sit cras venenatis velit, amet proin sint orci adipiscing. Volutpat eget, accumsan faucibus ultrices amet in tortor, at ac.
+              Thank you for your interst.  Please, fill out the information below and someone will be in contacting you soon.
             </p>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="wholeName">Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="wholeName" name="wholeName" placeholder="Your name..">
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Best way to contact</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Phone Number, email address..">
+              </div>
+            </div>
+            
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Information</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="subject" name="subject" placeholder="Tell us about yourself and project.." style="height:200px"></textarea>
+                </div>
+              </div>
+            
+              <div class="row">
+                <input type="submit" value="Submit">
+              </div>
+            
+          </form>
 
         </div>
 
@@ -450,29 +486,32 @@
 <script src="assets/js/application.js"></script>
 <script src="assets/js/allax.js"></script>
 
-
 <script>
-    var modalWindow;
+  
+    var contactWindow;
 
-    modalWindow = $("#modalWindow").dialog({
+    contactWindow = $("#contactWindow").dialog({
 
         autoOpen: false,
         modal: true,
         minHeight: 500,
         open: function() {
 
-            $(this).dialog("option", "width", (Math.min(700, $(window).width()) * 0.8));
+            $(this).dialog("option", "width", (Math.min(900, $(window).width()) * 0.8));
             $(this).dialog("option", "height", (Math.min(700, $(window).height()) * 0.8));
 
         }
 
     });
+  
 </script>
 
 <script>
-    function openModal(modalWindow) {
-        window[modalWindow].dialog("open");
+  
+    function openModal(contactWindow) {
+        window[contactWindow].dialog("open");
     }
+  
 </script>
 
 </html>

@@ -417,7 +417,7 @@ Safari, Opera */
     .equalColumns(@desktopBreak;
     4;
     10;
-    @float: left;
+    @float: none;
     0;
     true);
 }
@@ -450,4 +450,128 @@ Safari, Opera */
     @float: left;
     0;
     true);
+}
+
+
+/*************
+*
+*  Choice Boxes
+*
+*************/
+
+#orchardChoices.threeColumns .column 
+{
+  
+	width: 100% !important;
+
+}
+
+.choiceBox
+{
+  margin: auto;
+  width: 250px;
+  border: 1px solid @colorTwo;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+  margin-bottom:25px;
+}
+
+.choiceBox h4
+{
+    font-family: @subFontFamily;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom:25px;
+    color:@colorTwo;
+}
+
+.choiceBox .choiceBoxPrice
+{
+    display:block;
+    padding-bottom:25px;
+    width:100%;
+    text-align:center;
+    font-family: @mainFontFamily;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:@colorOne;
+}
+
+.choiceBox .choiceBoxContent
+{
+    font-family: @mainFontFamily;
+    font-size: 1em;
+    color:@colorOne;
+    line-height: 1.25rem;
+}
+
+.choiceBox .choiceBoxContent ul 
+{
+	list-style: square !important;
+  padding-left: 25px;
+  line-height: 1.25rem;
+
+}
+
+/*************
+*
+*  Forms
+*
+*************/
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-family: @subFontFamily;
+    font-size: 1em;
+    color:@colorOne;
+    line-height: 1.5em;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus, textarea:focus {
+  border: 3px solid #555;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: @colorTwo;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: @colorTwoDarken;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }

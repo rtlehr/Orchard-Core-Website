@@ -880,12 +880,12 @@ Safari, Opera */
 .threeColumns .column {
   width: 32.78867102%;
   margin-right: 0.81699346%;
-  float: left;
+  float: none;
 }
 .threeColumns .column:last-child {
   width: 32.78867102%;
   margin-right: 0%;
-  float: left;
+  float: none;
 }
 .fourColumns {
   position: relative;
@@ -922,6 +922,109 @@ Safari, Opera */
   width: 19.34640523%;
   margin-right: 0%;
   float: left;
+}
+/*************
+*
+*  Choice Boxes
+*
+*************/
+#orchardChoices.threeColumns .column {
+  width: 100% !important;
+}
+.choiceBox {
+  margin: auto;
+  width: 250px;
+  border: 1px solid #f15f22;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #eaeaea;
+  margin-bottom: 25px;
+}
+.choiceBox h4 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-bottom: 25px;
+  color: #f15f22;
+}
+.choiceBox .choiceBoxPrice {
+  display: block;
+  padding-bottom: 25px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Verdana', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #162c53;
+}
+.choiceBox .choiceBoxContent {
+  font-family: 'Verdana', sans-serif;
+  font-size: 1em;
+  color: #162c53;
+  line-height: 1.25rem;
+}
+.choiceBox .choiceBoxContent ul {
+  list-style: square !important;
+  padding-left: 25px;
+  line-height: 1.25rem;
+}
+/*************
+*
+*  Forms
+*
+*************/
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1em;
+  color: #162c53;
+  line-height: 1.5em;
+}
+input[type=text],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text]:focus,
+textarea:focus {
+  border: 3px solid #555;
+}
+input[type=button],
+input[type=submit],
+input[type=reset] {
+  background-color: #f15f22;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #a3370a;
+}
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 #mobileMenu {
   position: fixed;
@@ -1160,7 +1263,7 @@ Safari, Opera */
     font-size: 1.6em;
   }
   p {
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
   /*************
 *
@@ -1381,6 +1484,50 @@ IE 9 */
     width: 19.34640523%;
     margin-right: 0%;
     float: left;
+  }
+  /*************
+*
+*  Choice Boxes
+*
+*************/
+  #orchardChoices.threeColumns .column {
+    width: 32.78867102% !important;
+  }
+  .choiceBox {
+    margin: auto;
+    width: 250px;
+    border: 1px solid #f15f22;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #eaeaea;
+  }
+  .choiceBox h4 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 25px;
+    color: #f15f22;
+  }
+  .choiceBox .choiceBoxPrice {
+    display: block;
+    padding-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #162c53;
+  }
+  .choiceBox .choiceBoxContent {
+    font-family: 'Verdana', sans-serif;
+    font-size: 1em;
+    color: #162c53;
+    line-height: 1.25rem;
+  }
+  .choiceBox .choiceBoxContent ul {
+    list-style: square !important;
+    padding-left: 25px;
+    line-height: 1.25rem;
   }
   #mobileMenu {
     display: none;
